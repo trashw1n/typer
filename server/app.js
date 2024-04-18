@@ -19,11 +19,12 @@ const start = async () =>{
         const server = app.listen(PORT, () =>{
             console.log(`server listening on port ${PORT}`);
         });
-        const io = socketio(server, {
+        const io = socketio(server);
+        /*{
             cors: {
                 origin:'http://localhost:3000'
             }
-        });
+        }*/
         io.on("connect", socket =>{
             socket.on("create-game", async (nickname) =>{
                 try {

@@ -5,5 +5,5 @@ import io from 'socket.io-client';
     "timeout" : 10000,                  
     "transports" : ["websocket"]
 };*/
-const socket = io('http://localhost:3001');
+const socket = io('https://typer-hz7k.onrender.com');
 export default socket;
