@@ -5,5 +5,5 @@ import io from 'socket.io-client';
     "timeout" : 10000,                  
     "transports" : ["websocket"]
 };*/
-const socket = io('https://typer-hz7k.onrender.com');
+const socket = io(process.env.REACT_APP_SERVER_ADDRESS);
 export default socket;
